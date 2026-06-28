@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Hair By Amber — Edit your site</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d0d0d'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-style='italic' fill='%23d4af37' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0d0d0d; --black2:#141414; --panel:#1a1813; --field:#0f0f0d;
+  --gold:#d4af37; --gold-deep:#c9a227; --gold-soft:#e8cc6e; --cream:#f5f0e8;
+  --muted:#9c9384; --line:rgba(212,175,55,.2); --err:#ff9d9d; --ok:#9fe0a2;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Jost',-apple-system,sans-serif; --script:'Pinyon Script',cursive;
+  --grad-gold:linear-gradient(110deg,#a67c00,#d4af37 35%,#fcf6ba 50%,#d4af37 65%,#bf9b30);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);font-weight:300;background:var(--black);color:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+h1,h2{font-family:var(--serif);font-weight:500}
+.hidden{display:none!important}
+a{color:var(--gold)}
+.wrap{max-width:780px;margin:0 auto;padding:26px 20px 100px}
+.script{font-family:var(--script);background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+label{display:block;font-family:var(--sans);text-transform:uppercase;letter-spacing:.16em;font-size:.68rem;color:var(--muted);margin:16px 0 6px}
+input,textarea{width:100%;background:var(--field);border:1px solid var(--line);border-radius:5px;color:var(--cream);font:inherit;font-size:1rem;padding:11px 13px;transition:border-color .2s}
+input:focus,textarea:focus{outline:none;border-color:var(--gold)}
+textarea{resize:vertical;min-height:60px;line-height:1.5}
+.btn{font-family:var(--sans);text-transform:uppercase;letter-spacing:.16em;font-weight:400;font-size:.78rem;padding:.95em 1.7em;border-radius:3px;cursor:pointer;border:none;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-gold{background:var(--grad-gold);background-size:200% auto;color:#1a1407;box-shadow:0 8px 24px rgba(212,175,55,.28)}
+.btn-gold:hover{transform:translateY(-2px);background-position:right center}
+.btn-gold:disabled{opacity:.5;cursor:default;transform:none}
+.btn-line{background:transparent;color:var(--gold-soft);border:1px solid var(--line)}
+.btn-line:hover{border-color:var(--gold)}
+.notice{border-radius:6px;padding:10px 13px;font-size:.92rem;margin:12px 0}
+.notice.err{background:rgba(255,80,80,.1);border:1px solid rgba(255,120,120,.4);color:var(--err)}
+
+.login-shell{min-height:100svh;display:grid;place-items:center;padding:20px}
+.card{width:100%;max-width:420px;background:var(--black2);border:1px solid var(--line);border-radius:12px;padding:36px 30px;position:relative;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.6)}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:2px;background:var(--grad-gold)}
+.card .script{font-size:2.6rem;text-align:center;display:block;line-height:1}
+.card .sub{text-align:center;color:var(--muted);font-size:.85rem;text-transform:uppercase;letter-spacing:.2em;margin:6px 0 22px}
+
+.topbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.topbar .script{font-size:1.9rem}
+.topbar .spacer{flex:1}
+.who{color:var(--muted);font-size:.82rem}
+.lead{color:var(--muted);font-size:.92rem;margin-bottom:18px}
+.panel{background:var(--black2);border:1px solid var(--line);border-radius:10px;padding:22px 22px 24px;margin-top:18px}
+.panel h2{font-family:var(--serif);font-size:1.3rem;color:var(--gold-soft);border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:4px}
+.two{display:grid;gap:0 18px;grid-template-columns:1fr}
+@media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+.svc-block,.price-row{border:1px solid var(--line);border-radius:8px;padding:14px;margin-top:14px}
+.price-row{display:grid;grid-template-columns:1fr 120px;gap:12px;align-items:center}
+.price-row .pl{font-family:var(--serif);font-size:1.1rem;color:var(--cream)}
+.photo-block{display:flex;gap:16px;align-items:center;margin-top:14px;flex-wrap:wrap}
+.photo-thumb{width:120px;height:84px;border-radius:6px;object-fit:cover;border:1px solid var(--line);background:var(--field);flex:0 0 auto}
+.photo-ph{width:120px;height:84px;border-radius:6px;border:1px dashed var(--line);background:linear-gradient(150deg,#1c180f,#0e0d0b);display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-size:.8rem;color:var(--gold-soft);flex:0 0 auto;text-align:center;padding:6px}
+.photo-block .pf{flex:1;min-width:200px}
+.photo-block .pf .name{font-family:var(--sans);text-transform:uppercase;letter-spacing:.1em;font-size:.74rem;color:var(--cream)}
+.upstate{font-size:.82rem;color:var(--muted);margin-top:4px}
+input[type=file]{font-size:.84rem;padding:8px;margin-top:6px}
+.savebar{position:sticky;bottom:0;background:linear-gradient(transparent,var(--black) 40%);padding:22px 0 6px;margin-top:26px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.savebar .spacer{flex:1}
+.muted{color:var(--muted);font-size:.82rem}
+</style>
+</head>
+<body>
+
+<!-- ===== LOGIN ===== -->
+<div id="view-login" class="login-shell">
+  <form class="card" id="login-form">
+    <span class="script">Hair by Amber</span>
+    <div class="sub">Salon editor</div>
+    <div id="login-error" class="notice err hidden"></div>
+    <label for="email">Email</label>
+    <input id="email" type="email" required autocomplete="username" placeholder="you@example.com">
+    <label for="password">Password</label>
+    <input id="password" type="password" required autocomplete="current-password" placeholder="••••••••">
+    <button class="btn btn-gold" type="submit" id="login-btn" style="width:100%;margin-top:22px">Sign in</button>
+  </form>
+</div>
+
+<!-- ===== EDITOR ===== -->
+<main id="view-editor" class="wrap hidden">
+  <div class="topbar">
+    <span class="script">Hair by Amber</span>
+    <span class="spacer"></span>
+    <span class="who" id="who"></span>
+    <a class="btn btn-line" id="view-site" href="../" target="_blank" style="text-decoration:none">View site ↗</a>
+    <button class="btn btn-line" id="logout">Log out</button>
+  </div>
+  <p class="lead">Change any text, price or photo below, then press <b>Save changes</b>. Your live site updates straight away.</p>
+  <div id="editor-error" class="notice err hidden"></div>
+
+  <div class="panel">
+    <h2>Headline &amp; contact</h2>
+    <div id="text-fields"></div>
+  </div>
+
+  <div class="panel">
+    <h2>Services</h2>
+    <div id="services"></div>
+  </div>
+
+  <div class="panel">
+    <h2>Key prices</h2>
+    <div id="prices"></div>
+    <p class="muted" style="margin-top:12px">These are the prices shown on your site. Other items show “POA”.</p>
+  </div>
+
+  <div class="panel">
+    <h2>Photos</h2>
+    <div id="photos"></div>
+    <p class="muted" style="margin-top:14px">JPG, PNG or WebP, up to 6&nbsp;MB. Perfect for your balayage before &amp; afters. A new photo replaces the placeholder on save.</p>
+  </div>
+
+  <div class="savebar">
+    <button class="btn btn-gold" id="save">Save changes</button>
+    <span id="save-msg" class="muted"></span>
+    <span class="spacer"></span>
+    <button class="btn btn-line" id="changepw">Change password</button>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const CFG = {
+  url: 'https://nkvezionyeeyidhtpjzy.supabase.co',
+  anon: 'sb_publishable_-9l89xivt1ntbMtRetEHmQ_8lEU7qKk',
+  bucket: 'cms-hair-by-amber',
+  id: 'hair-by-amber',
+};
+const sb = supabase.createClient(CFG.url, CFG.anon);
+
+// Flat defaults — must match the site's built-in text so the editor opens pre-filled.
+const DEFAULTS = {
+  headline: "North Shore's blonde & balayage specialist",
+  subline: "Boutique home salon · By appointment · North Shore, Auckland",
+  phone: "021 026 07650",
+  email: "hairbyamber14@gmail.com",
+  location: "North Shore, Auckland",
+  "location-sub": "Mairangi Bay area · private home salon · by appointment",
+  "svc0-title": "Colour", "svc0-desc": "Amber's signature. Lived-in blondes, sun-kissed balayage and flawless grey blending — colour that grows out beautifully.",
+  "svc1-title": "Cuts & Styling", "svc1-desc": "Precision cuts and polished finishes for the whole family.",
+  "svc2-title": "Treatments", "svc2-desc": "Smoothing, strengthening and shine — including vegan Nanoplasty.",
+  "svc3-title": "Extensions & More", "svc3-desc": "Length, volume and lasting transformations.",
+  "price-half-balayage": "$200", "price-full-balayage": "$250", "price-nanoplasty": "$300", "price-hair-treatment": "$80",
+  photos: { hero: "", about: "", gallery0: "", gallery1: "", gallery2: "", gallery3: "", gallery4: "", gallery5: "" },
+};
+
+const TEXT_FIELDS = [
+  { key: 'headline', label: 'Headline', area: true },
+  { key: 'subline', label: 'Sub-line (under the logo)' },
+  { key: 'phone', label: 'Phone (call / text)' },
+  { key: 'email', label: 'Email' },
+  { key: 'location', label: 'Location' },
+  { key: 'location-sub', label: 'Location note' },
+];
+const SERVICES = [
+  { t: 'svc0-title', d: 'svc0-desc' }, { t: 'svc1-title', d: 'svc1-desc' },
+  { t: 'svc2-title', d: 'svc2-desc' }, { t: 'svc3-title', d: 'svc3-desc' },
+];
+const PRICES = [
+  { key: 'price-half-balayage', label: 'Half Head Balayage' },
+  { key: 'price-full-balayage', label: 'Full Head Balayage' },
+  { key: 'price-nanoplasty', label: 'Nanoplasty' },
+  { key: 'price-hair-treatment', label: 'Hair treatment' },
+];
+const PHOTOS = [
+  { key: 'about', label: 'About / stylist photo' },
+  { key: 'hero', label: 'Hero background' },
+  { key: 'gallery0', label: 'Gallery 1 — before/after' },
+  { key: 'gallery1', label: 'Gallery 2' },
+  { key: 'gallery2', label: 'Gallery 3' },
+  { key: 'gallery3', label: 'Gallery 4' },
+  { key: 'gallery4', label: 'Gallery 5' },
+  { key: 'gallery5', label: 'Gallery 6' },
+];
+
+const $ = (id) => document.getElementById(id);
+let state = null, pendingUploads = {};
+
+function show(v){ $('view-login').classList.toggle('hidden', v!=='login'); $('view-editor').classList.toggle('hidden', v!=='editor'); }
+function err(el, msg){ const e=$(el); if(!msg){e.classList.add('hidden');return;} e.textContent=msg; e.classList.remove('hidden'); }
+function escq(s){ return String(s == null ? '' : s).replace(/"/g, '&quot;'); }
+
+$('login-form').addEventListener('submit', async (e) => {
+  e.preventDefault(); err('login-error','');
+  $('login-btn').disabled = true; $('login-btn').textContent = 'Signing in…';
+  const { error } = await sb.auth.signInWithPassword({ email: $('email').value.trim(), password: $('password').value });
+  $('login-btn').disabled = false; $('login-btn').textContent = 'Sign in';
+  if (error) return err('login-error', error.message);
+  boot();
+});
+$('logout').addEventListener('click', async () => { await sb.auth.signOut(); location.reload(); });
+$('changepw').addEventListener('click', async () => {
+  const pw = prompt('New password (min 8 characters):'); if (!pw) return;
+  if (pw.length < 8) return alert('Too short — use at least 8 characters.');
+  const { error } = await sb.auth.updateUser({ password: pw });
+  alert(error ? ('Could not change password: ' + error.message) : 'Password updated.');
+});
+
+async function boot(){
+  const { data:{ session } } = await sb.auth.getSession();
+  if (!session) return show('login');
+  $('who').textContent = session.user.email;
+  show('editor');
+  const { data, error } = await sb.from('cms_content').select('data').eq('id', CFG.id).maybeSingle();
+  if (error) err('editor-error', 'Could not load content: ' + error.message);
+  const d = (data && data.data) || {};
+  state = Object.assign({}, DEFAULTS, d);
+  state.photos = Object.assign({}, DEFAULTS.photos, d.photos || {});
+  render();
+}
+
+function render(){
+  // text fields
+  $('text-fields').innerHTML = TEXT_FIELDS.map((f) =>
+    `<label>${f.label}</label>` + (f.area
+      ? `<textarea data-k="${f.key}">${escHtml(state[f.key]||'')}</textarea>`
+      : `<input data-k="${f.key}" type="text" value="${escq(state[f.key]||'')}">`)).join('');
+  // services
+  $('services').innerHTML = SERVICES.map((s, i) =>
+    `<div class="svc-block"><label>Service ${i+1} — name</label>` +
+    `<input data-k="${s.t}" type="text" value="${escq(state[s.t]||'')}">` +
+    `<label>Description</label><textarea data-k="${s.d}">${escHtml(state[s.d]||'')}</textarea></div>`).join('');
+  // prices
+  $('prices').innerHTML = PRICES.map((p) =>
+    `<div class="price-row"><span class="pl">${p.label}</span><input data-k="${p.key}" type="text" value="${escq(state[p.key]||'')}"></div>`).join('');
+  // photos
+  $('photos').innerHTML = '';
+  PHOTOS.forEach(({key,label}) => {
+    const cur = state.photos[key];
+    const row = document.createElement('div'); row.className = 'photo-block';
+    row.innerHTML = (cur ? `<img class="photo-thumb" data-prev="${key}" src="${escq(cur)}" alt="">` : `<div class="photo-ph" data-prev="${key}">${label}</div>`) +
+      `<div class="pf"><div class="name">${label}</div><input type="file" accept="image/*" data-up="${key}"><div class="upstate" data-state="${key}">${cur?'':'Using current site image'}</div></div>`;
+    $('photos').appendChild(row);
+    row.querySelector('[data-up]').addEventListener('change', (e) => onPick(key, e.target.files[0]));
+  });
+}
+function escHtml(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function onPick(key, file){
+  if (!file) return;
+  pendingUploads[key] = file;
+  const url = URL.createObjectURL(file);
+  const prev = document.querySelector('[data-prev="'+key+'"]');
+  if (prev) { if (prev.tagName === 'IMG') prev.src = url;
+    else { const img=document.createElement('img'); img.className='photo-thumb'; img.dataset.prev=key; img.src=url; prev.replaceWith(img); } }
+  document.querySelector('[data-state="'+key+'"]').textContent = 'New photo ready — press Save to publish.';
+}
+
+$('save').addEventListener('click', save);
+async function save(){
+  err('editor-error','');
+  const btn = $('save'); btn.disabled = true; btn.textContent = 'Saving…'; $('save-msg').textContent = '';
+  try {
+    document.querySelectorAll('[data-k]').forEach((el) => { state[el.dataset.k] = el.value.trim(); });
+    for (const key of Object.keys(pendingUploads)) {
+      const file = pendingUploads[key];
+      const ext = (file.name.split('.').pop() || 'jpg').toLowerCase().replace(/[^a-z0-9]/g,'') || 'jpg';
+      const path = key + '-' + Date.now() + '.' + ext;
+      $('save-msg').textContent = 'Uploading ' + key + '…';
+      const up = await sb.storage.from(CFG.bucket).upload(path, file, { upsert: true, cacheControl: '3600' });
+      if (up.error) throw new Error('Photo upload failed: ' + up.error.message);
+      state.photos[key] = sb.storage.from(CFG.bucket).getPublicUrl(path).data.publicUrl;
+    }
+    pendingUploads = {};
+    const { error } = await sb.from('cms_content')
+      .upsert({ id: CFG.id, data: state, updated_at: new Date().toISOString() }, { onConflict: 'id' });
+    if (error) throw new Error(error.message);
+    $('save-msg').innerHTML = '✓ Saved — <a href="../" target="_blank">view your live site</a>';
+    document.querySelectorAll('[data-state]').forEach(e => { if(/ready/i.test(e.textContent)) e.textContent=''; });
+  } catch (e) {
+    err('editor-error', e.message); $('save-msg').textContent = '';
+  } finally {
+    btn.disabled = false; btn.textContent = 'Save changes';
+  }
+}
+
+sb.auth.getSession().then(({ data:{ session } }) => session ? boot() : show('login'));
+</script>
+</body>
+</html>
